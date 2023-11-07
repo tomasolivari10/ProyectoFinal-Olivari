@@ -1,6 +1,6 @@
 const botones = document.querySelectorAll('.boton-destacados');
 
-let carrito = []
+let carrito = [] //inicializo un array vacio para luego ir añadiendo los productos 
 let totalCarrito = 0
 
 botones.forEach((boton, indice) => {
@@ -40,7 +40,7 @@ botones.forEach((boton, indice) => {
         actualizarCarrito()
         // agrego el producto al carrito 
 
-        totalCarrito += precioProducto;
+        totalCarrito += precioProducto;//+= para agregar sumar el precio del nuevo producto al que ya estaba, en vez de reasignarlo.
 
         // actualiza el total del carrito por cada producto agregado
         actualizarTotalCarrito(totalCarrito);
@@ -113,7 +113,7 @@ function manejarBotonCompra() {
         const metodoPago = document.querySelector('input[name="metodo-pago"]:checked');
         if (carrito.length === 0) {
             alert('Agrega productos al carrito antes de comprar.')
-        } else if (!metodoPago) {
+        } else if (!metodoPago) {//si metodo de pago es falsy o false
             const pago = document.getElementById("no-pago")
             const parrafo = document.createElement("p")
             parrafo.innerHTML = "NO HAS ELEGIDO NINGUN METODO DE PAGO!"
