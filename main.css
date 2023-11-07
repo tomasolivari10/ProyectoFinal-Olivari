@@ -1,0 +1,923 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Alegreya", serif;
+  font-family: "Roboto", sans-serif;
+  margin: auto;
+  font-size: 13px;
+  background-color: black;
+}
+
+hr {
+  width: 100%;
+  color: rgb(154, 144, 108) ;
+}
+
+p {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h1 {
+  font-family: "Alegreya", serif;
+  font-size: 33px;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-family: "Alegreya", serif;
+}
+
+h4 {
+  color: white;
+  font-size: 20px;
+  color: black;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  background-color: black;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  width: 215px;
+  margin: 0;
+}
+
+nav {
+  position: fixed;
+  padding: 30px;
+  top: 0;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  right: 0;
+  transition: all 0.6s ease;
+  transform: translateX(100%);
+  background-color: black;
+  z-index: 3;
+}
+
+nav a {
+  color: white;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: rgb(94, 84, 51);
+  background-color: white;
+  border: 1px white;
+  border-radius: 3px;
+}
+
+.hamb  {
+    font-size: 35px;
+    margin-right: 10px;
+    color: rgb(154, 144, 108);
+    z-index: 3 ;
+}
+
+.hamb:hover {
+  color: rgb(154, 144, 108);
+}
+
+.open {
+  transform: translateX(0);
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+footer .container {
+  padding: 70px 0;
+}
+
+footer .barra-footer {
+  background-color: rgb(148, 146, 146);
+  padding: 17px;
+  text-align: center;
+  margin-bottom: 0;
+  width: 100%;
+  font-size: 13px;
+  font-family: sans-serif;
+}
+
+footer .logo-footer {
+  height: 100px;
+}
+
+footer .logo-footer img {
+  width: 200px;
+}
+
+footer ul {
+  padding-left: 0;
+}
+
+footer ul li {
+  font-size: 13px;
+}
+
+footer ul li a:hover {
+  color: white;
+}
+
+footer .redes {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer .redes i {
+  font-size: 20px;
+  margin-top: 15px;
+  transition: width 0.2s ease;
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 12px;
+}
+
+footer .redes i:hover {
+  background-color: rgb(154, 144, 108);
+}
+
+.body {
+  background-color: rgb(68, 68, 68);
+}
+
+.h2-destacados {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 35px;
+  color: rgb(154, 144, 108);
+}
+
+.h2-galeria {
+  text-align: center;
+  font: 75px "Alegreya", serif;
+  border-bottom: 1px dashed rgb(154, 144, 108);
+  padding-top: 155px;
+  margin-bottom: 40px;
+  color: rgb(154, 144, 108);
+}
+
+.h2-gluten-free {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 90px;
+  margin-bottom: 35px;
+  color: rgb(154, 144, 108);
+}
+
+.h2-contactenos {
+  font: 35px "Alegreya", serif;
+  color: white;
+}
+
+.h3 {
+  font-size: 20px;
+  color: rgb(154, 144, 108);
+}
+
+#carrito{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+#carrito select{
+  margin-right: 15px;
+  background-color: black;
+  color: white;
+  border: 1px solid rgb(154, 144, 108);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#carritoCompras {
+  margin-top: 50px;
+  margin-bottom: 30px
+}
+
+#carritoCompras h2 {
+    font: 45px "Alegreya", serif;
+    color:rgb(154, 144, 108);
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: double;
+}
+
+#cantidadCarrito p{
+  margin-bottom: 0;
+  text-align: center;
+  padding: 2px 0;
+}
+
+.detalles-carrito{
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.detalles-carrito h3{
+  font-size: 20px;
+  color:rgb(154, 144, 108)  ;
+}
+
+.detalles-carrito ul {
+  padding: 0;
+}
+
+#totalCompra {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  font-size: 16px;
+}
+
+.h2-pago {
+  font-size: 30px;
+  color:rgb(154, 144, 108) ;
+  margin-bottom: 30px;
+}
+
+#metodoPago{
+  display: flex;
+  margin-bottom: 10px;
+}
+
+#metodoPago label{
+  font-size: 16px;
+  color: white;
+  padding: 10px;
+}
+
+#metodoPago button {
+  background-color: black;
+  color: white;
+  border: 1px solid rgb(154, 144, 108);
+  border-radius: 4px;
+  font-weight: bold;
+  padding: 10px 15px;
+  font-size: 14px;
+  transition:all ease-in-out 0.1s ;
+  margin-left: 20px;
+}
+
+#metodoPago button:hover {
+  background-color: white;
+  color: black;
+}
+
+.deleteBtn {
+  background-color: black;
+  color: white;
+  border: 1px solid rgb(154, 144, 108);
+  border-radius: 3px;
+  font-weight: bold;
+  padding: 4px 5px;
+  font-size: 10px;
+  transition:all ease-in-out 0.1s ;
+  margin-left: 20px;
+}
+
+.deleteBtn:hover{
+  background-color: white;
+  color: black;
+}
+
+#no-pago {
+  margin-bottom: 70px;
+}
+
+#pizzas {
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+#pizzas .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+#pizzas .container .destacados {
+  border: 2px solid rgb(154, 144, 108);
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 27%;
+}
+
+#pizzas .destacados .imagen-destacados img {
+  width: 100%;
+  height: 220px;
+  border-radius: 5px;
+}
+
+#pizzas .destacados .contenido-destacados {
+  padding-left: 20px;
+  padding-bottom: 30px;
+  margin-top: 15px;
+  color: white;
+}
+
+#pizzas .destacados .contenido-destacados p {
+  margin-bottom: 20px;
+  color: white;
+  font-size: 16px;
+}
+
+#pizzas .destacados .contenido-destacados h3 {
+  font-size: 1.6rem;
+  padding-bottom: 5px;
+  color: rgb(154, 144, 108);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 1fr);
+}
+
+#menus {
+  padding: 50px 20px;
+}
+
+.titulo-menu {
+  margin-top: 100px;
+  margin-bottom: 80px;
+  padding: 30px;
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  font-family: "Alegreya", serif;
+  background-color: rgb(154, 144, 108);
+}
+
+.menu {
+  margin: 30px 40px;
+}
+
+.menu h3 {
+  font-size: 50px;
+  margin-bottom: 40px;
+  color: rgb(154, 144, 108);
+  border-bottom: double;
+  font-family: "Alegreya", serif;
+}
+
+.menu ul {
+  padding: 0;
+}
+
+.menu ul li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted rgb(154, 144, 108);
+  margin-top: 8px;
+  padding: 0 10px;
+  font: 18px "serif";
+}
+
+.grid-contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  filter: grayscale(1);
+  border: 1px solid #ccc;
+  padding: 2px;
+  transition: transform 0.2s;
+}
+
+.grid-item img:hover {
+  filter: grayscale(0);
+  transform: scale(1.3);
+  position: relative;
+  z-index: 2;
+}
+
+.contactenos .container {
+  margin-top: 170px;
+  margin-bottom: 70px;
+  width: 45%;
+  padding: 30px;
+  font-size: 15px;
+  border: 2px solid rgb(154, 144, 108);
+  border-radius: 8px;
+  color: white;
+}
+
+#acercadenosotros {
+  margin-bottom: 120px;
+  padding: 95px 30px 10px 30px;
+}
+
+.nosotros .carousel img {
+  margin-top: 50px;
+}
+
+.nosotros img {
+  height: 500px;
+}
+
+.nosotros p {
+  text-align: justify;
+  width: 90%;
+  font-family: serif;
+  font-size: 18px;
+  line-height: 2;
+  color: white;
+  margin-top: 10px;
+}
+
+.nosotros h2 {
+  font-family: "Alegreya", serif;
+  font-size: 60px;
+  color: rgb(154, 144, 108);
+  padding-bottom: 20px;
+  padding-top: 60px;
+}
+
+.galeria-nosotros {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.galeria-nosotros .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.ubicacion .container {
+  width: 70%;
+}
+
+.ubicacion h2 {
+  padding-top: 160px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 60px;
+  color: rgb(154, 144, 108);
+}
+
+.ubicacion iframe {
+  padding: 0;
+  border: 3px solid rgb(154, 144, 108);
+  margin-bottom: 100px;
+}
+
+.carousel {
+  margin-top: 95px;
+}
+
+.carousel-nosotros{
+  margin-top: 40px;
+}
+
+.carousel img {
+  height: 530px;
+}
+
+.carousel h5 {
+  font: 47px "Alegreya", serif;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.carousel p {
+  font-size: 30px;
+  padding-bottom: 5px;
+  color: white;
+  font-family: "Alegreya", serif;
+}
+
+.carousel-item img {
+  animation: anopacity 4s ease-in-out;
+}
+
+@keyframes anopacity {
+  0% {
+    opacity: 0.02;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.flip-card {
+  background-color: transparent;
+  width: auto;
+  height: 220px;
+  perspective: 1000px;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-front {
+  position: absolute;
+  width: 100%;
+  height: 220px;
+  backface-visibility: hidden;
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 220px;
+  backface-visibility: hidden;
+  background-color: rgb(129, 129, 129);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back p {
+  color: white;
+}
+
+ul li {
+  list-style: none;
+  padding-bottom: 2px;
+  padding-top: 2px;
+}
+
+.img-nosotros {
+  margin-top: 10px;
+  width: 32%;
+}
+
+.img-nosotros img {
+  width: 100%;
+  height: 300px;
+  padding: 2px;
+  background-color: rgb(154, 144, 108);
+}
+
+
+.boton-destacados {
+  background-color: black;
+  color: white;
+  padding: 13px 11px;
+  font-weight: bold;
+  font-size: 15px;
+  border: 1px solid rgb(154, 144, 108);
+  border-radius: 4px;
+  transition: all ease-in-out 0.2s;
+}
+
+.boton-destacados:hover {
+  background-color: white;
+  color: black;
+}
+
+.boton-contactenos {
+  background-color: black;
+  color: white;
+  padding: 11px 16px;
+  font-weight: bold;
+  font-size: 18px;
+  border: 2px solid rgb(154, 144, 108);
+  border-radius: 4px;
+  transition: all ease-in-out 0.2s;
+}
+
+.boton-contactenos:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+.gotopbtn {
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  background-color: black;
+  border: solid 2px rgb(154, 144, 108);
+  bottom: 30px;
+  left: 30px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 35px;
+  color: white;
+  font-size: 18px;
+}
+
+.gotopbtn:hover {
+  color: white;
+}
+
+@keyframes chevrondown {
+  0% {
+    transform: translate(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+.fas.fa-chevron-down.fa-3x {
+  animation: chevrondown 1.2s infinite;
+  color: white;
+}
+
+@media screen and (min-width: 1200px) {
+  .grid-contenedor {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 30px;
+  }
+
+  .grid-item {
+    height: 230px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .grid-contenedor {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .grid-item img:hover {
+    transform: scale(1.2);
+  }
+
+  .nosotros p {
+    line-height: 1.7;
+  }
+
+  .nosotros img {
+    height: 560px;
+  }
+
+  .img-nosotros {
+    width: 42%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  nav { 
+    width: 50%;
+  }
+   
+  footer {
+    text-align: center;
+  }
+
+  footer .container {
+    padding: 40px 15px;
+    margin-bottom: 30px;
+  }
+
+  footer .redes {
+    justify-content: center;
+  }
+
+  footer .logo-footer {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+
+  .nav-item {
+    border: 1px solid rgb(154, 144, 108);
+    font-size: 16px;
+    text-align: center;
+    padding: 5px 10px;
+  }
+
+  #pizzas .container .destacados {
+    width: 45%;
+  }
+
+  .nosotros p {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .img-nosotros {
+    width: 43%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+
+  .contactenos .container {
+    margin-top: 180px;
+    margin-bottom: 70px;
+    width: 60%;
+  }
+
+  .ubicacion .container {
+    width: 80%;
+  }
+
+  .dropdown-menu-dark {
+    background-color: gray;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header .logo {
+    width: 210px;
+    margin: 0;
+  }
+
+  nav {
+    position: fixed;
+    padding: 30px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    right: 0;
+    transition: all 0.6s ease;
+    transform: translateY(-100%);
+  }
+
+  .open {
+    transform: translateY(0);
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  footer .redes {
+    justify-content: center;
+  }
+
+  footer .logo-footer {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+
+  footer ul {
+    margin-top: 10px;
+  }
+
+  footer .h3 {
+    margin-top: 15px;
+  }
+
+  #pizzas .container .destacados {
+    width: 45%;
+  }
+
+  .grid-contenedor {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .img-nosotros {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .contactenos .container {
+    width: 80%;
+  }
+
+  .ubicacion .container {
+    width: 90%;
+  }
+
+  .fas.fa-chevron-down.fa-3x {
+    display: none;
+  }
+
+  .gotopbtn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  header .logo {
+    width: 190px;
+    height: 70px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  #pizzas .h2-destacados {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  #pizzas .container .destacados {
+    width: 70%;
+  }
+
+  .grid-item img:hover {
+    transform: scale(1.1);
+  }
+
+  .carousel img {
+    height: 60vh;
+  }
+
+  .nosotros img {
+    height: 400px;
+  }
+
+  .img-nosotros {
+    width: 85%;
+  }
+
+  .galeria-nosotros img:hover {
+    transform: scale(1.1);
+  }
+
+  .contactenos .container {
+    width: 90%;
+  }
+
+  #acercadenosotros {
+    padding: 0 30px 10px 30px;
+  }
+
+  .ubicacion .container {
+    width: 95%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

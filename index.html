@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="la voluttuosa pizzeria torino">
+    <meta name="keywords" content="pizzeria, pizza, torino, italia, santa rita, delivery, gluten free, la voluttuosa">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya:ital@1&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.3/build/global/luxon.min.js">
+    </script>
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="./main.css">
+    <script src="https://kit.fontawesome.com/162005d3b0.js" crossorigin="anonymous"></script>
+
+
+    <title>La Voluttuosa | Pizzeria</title>
+
+</head>
+
+<body>
+
+    <header>
+        <a href="./index.html">
+            <img src="./assets/images/la+voluttuosa+logo2-220a6b78-400w.webp" class="logo">
+        </a>
+        <nav>
+            <a href="./index.html">Inicio</a>
+            <hr>
+            <a href="./pages/menu.html">Menu</a>
+            <hr>
+            <a href="./pages/pedido.html">Hace tu pedido</a>
+            <hr>
+            <a href="./pages/galeria.html">Galeria</a>
+            <hr>
+            <a href="./pages/acercadenosotros.html">¿Quienes Somos?</a>
+            <hr>
+            <a href="./pages/ubicacion.html">Ubicacion</a>
+            <hr>
+            <a href="./pages/contactenos.html">Contacto</a>
+        </nav>
+        <a href="#" class="hamb"><i class="fas fa-bars"></i></a>
+    </header>
+
+    <main>
+
+        <section>
+            <!--CAROUSEL BOOTSTRAP-->
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./assets/images/mesa sala.jpg" class="d-block w-100" alt="sala restaurante">
+                        <div class="carousel-caption">
+                            <h5>!Bienvenidos a la Voluttuosa!</h5>
+                            <a href="#pizzas" class="btn-scroll hidden-xs">
+                                <i class="fas fa-chevron-down fa-3x" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/pizzas-en-horno-de-piedra.webp" class="d-block w-100"
+                            alt="horno a leña">
+                        <div class="carousel-caption">
+                            <p>"Todas las pizzas que imaginaste, incluidas las sin gluten, en un solo lugar"</p>
+                            <a href="#pizzas" class="btn-scroll hidden-xs">
+                                <i class="fas fa-chevron-down fa-3x" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/pizzas 1.jpg" class="d-block w-100" alt="pizzas">
+                        <div class="carousel-caption">
+                            <p>"Todas las pizzas que imaginaste, incluidas las sin gluten, en un solo lugar"</p>
+                            <a href="#pizzas" class="btn-scroll hidden-xs">
+                                <i class="fas fa-chevron-down fa-3x" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="pizzas">
+            <h2 class="h2-destacados">"ELIGE TU PIZZA"</h2>
+            <div class="container">
+                <!--animacion wowjs-->
+                <div class="destacados wow bounceInUp" style="visibility:visible; animation-name: fadeInUp;">
+                    <div class="flip-card">
+                        <!--flip cards con rotacion 180 y contenido de ambos lados-->
+                        <div class="flip-card-inner">
+                            <div class="imagen-destacados flip-card-front">
+                                <img src="./assets/images/diavola.jpg" alt="pizza diavola">
+                            </div>
+                            <div class="flip-card-back">
+                                <h2>Ingredientes:</h2>
+                                <p>Mozzarella</p>
+                                <p>Salame picante</p>
+                                <h2>Precio:</h2>
+                                <p>$1.300</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenido-destacados">
+                        <h3>Diavola</h3>
+                        <p>FAVORITAS</p>
+                        <a href="./pages/menu.html" class="boton-destacados">Ordena Online</a>
+                    </div>
+                </div>
+                <div class="destacados wow bounceInUp" style="visibility:visible; animation-name: fadeInUp;">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="imagen-destacados flip-card-front">
+                                <img src="./assets/images/capricciosa.jpg" alt="pizza capricciosa">
+                            </div>
+                            <div class="flip-card-back">
+                                <h2>Ingredientes:</h2>
+                                <p>Jamon cocido</p>
+                                <p>Champiñones</p>
+                                <p>Alcachofa</p>
+                                <h2>Precio:</h2>
+                                <p>$1.400</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenido-destacados">
+                        <h3>Capricciosa</h3>
+                        <p>FAVORITAS</p>
+                        <a href="./pages/menu.html" class="boton-destacados">Ordena Online</a>
+                    </div>
+                </div>
+                <div class="destacados wow bounceInUp" style="visibility:visible; animation-name: fadeInUp;">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="imagen-destacados flip-card-front">
+                                <img src="./assets/images/marghe.jpg" alt="pizza margherita">
+                            </div>
+                            <div class="flip-card-back">
+                                <h2>Ingredientes:</h2>
+                                <p>Mozzarella</p>
+                                <p>Tomate</p>
+                                <p>Oregano</p>
+                                <h2>Precio:</h2>
+                                <p>$1.200</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenido-destacados">
+                        <h3>Margherita</h3>
+                        <p>CLASICAS</p>
+                        <a href="./pages/menu.html" class="boton-destacados">Ordena Online</a>
+                    </div>
+                </div>
+                <div class="destacados wow bounceInUp" style="visibility:visible; animation-name: fadeInUp;">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="imagen-destacados flip-card-front">
+                                <img src="./assets/images/voluttuosa.jpg" alt="pizza voluttuosa">
+                            </div>
+                            <div class="flip-card-back">
+                                <h2>Ingredientes:</h2>
+                                <p>Mozzarella</p>
+                                <p>Gorgonzola</p>
+                                <p>Guanciale</p>
+                                <h2>Precio:</h2>
+                                <p>$1.400</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenido-destacados">
+                        <h3>Voluttuosa</h3>
+                        <p>ESPECIALIDAD</p>
+                        <a href="./pages/menu.html" class="boton-destacados">Ordena Online</a>
+                    </div>
+                </div>
+                <div class="destacados wow bounceInUp" style="visibility:visible; animation-name: fadeInUp;">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="imagen-destacados flip-card-front">
+                                <img src="./assets/images/italy pizza.jpg" alt="pizza boscaiola">
+                            </div>
+                            <div class="flip-card-back">
+                                <h2>Ingredientes:</h2>
+                                <p>Champiñones</p>
+                                <p>Guanciale</p>
+                                <p>Salamino</p>
+                                <h2>Precio:</h2>
+                                <p>$1.500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenido-destacados">
+                        <h3>Boscaiola</h3>
+                        <p>CLASICAS</p>
+                        <a href="./pages/menu.html" class="boton-destacados">Ordena Online</a>
+                    </div>
+                </div>
+                <div class="destacados wow bounceInUp" style="visibility:visible; animation-name: fadeInUp;">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="imagen-destacados flip-card-front">
+                                <img src="./assets/images/Frutti di mare.jpg" alt="pizza frutos del mar">
+                            </div>
+                            <div class="flip-card-back">
+                                <h2>Ingredientes:</h2>
+                                <p>Camarones</p>
+                                <p>Mejillones</p>
+                                <p>Calamares</p>
+                                <h2>Precio:</h2>
+                                <p>$1.750</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenido-destacados">
+                        <h3>Frutti di mare</h3>
+                        <p>ESPECIALIDAD</p>
+                        <a href="./pages/menu.html" class="boton-destacados">Ordena Online</a>
+                    </div>
+                </div>
+            </div>
+            <h2 class="h2-gluten-free">"GLUTEN FREE"</h2>
+            <div class="container">
+                <div class="destacados wow bounceInUp" style="visibility:visible; animation-name: fadeInUp;">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="imagen-destacados flip-card-front">
+                                <img src="./assets/images/pizza.jpg" alt="pizza buffalina">
+                            </div>
+                            <div class="flip-card-back">
+                                <h2>Ingredientes:</h2>
+                                <p>Mozzarella de bufalla</p>
+                                <p>Crema de alcachofas</p>
+                                <p>Ricotta</p>
+                                <h2>Precio:</h2>
+                                <p>$1.600</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenido-destacados">
+                        <h3>Buffalina</h3>
+                        <p>SIN GLUTEN</p>
+                        <a href="./pages/glutenfree.html" class="boton-destacados">Ordena Online</a>
+                    </div>
+                </div>
+                <div class="destacados wow bounceInUp" style="visibility:visible; animation-name: fadeInUp;">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="imagen-destacados flip-card-front">
+                                <img src="./assets/images/pizza sin gluten 2.webp" alt="pizza carciofina">
+                            </div>
+                            <div class="flip-card-back">
+                                <h2>Ingredientes:</h2>
+                                <p>Tomate</p>
+                                <p>Berenjena asada</p>
+                                <p>Parmesano</p>
+                                <h2>Precio:</h2>
+                                <p>$1.500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenido-destacados">
+                        <h3>Carciofina</h3>
+                        <p>SIN GLUTEN</p>
+                        <a href="./pages/glutenfree.html" class="boton-destacados">Ordena Online</a>
+                    </div>
+                </div>
+
+                <div class="destacados wow bounceInUp" style="visibility:visible; animation-name: fadeInUp;">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="imagen-destacados flip-card-front">
+                                <img src="./assets/images/ortolana.jpg" alt="pizza vegetariana">
+                            </div>
+                            <div class="flip-card-back">
+                                <h2>Ingredientes:</h2>
+                                <p>Pimiento</p>
+                                <p>Berenjena</p>
+                                <p>Calabacines</p>
+                                <h2>Precio:</h2>
+                                <p>$1.450</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenido-destacados">
+                        <h3>Ortolana</h3>
+                        <p>SIN GLUTEN</p>
+                        <a href="./pages/glutenfree.html" class="boton-destacados">Ordena Online</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="logo-footer">
+                        <a href="./index.html">
+                            <img src="./assets/images/la+voluttuosa+logo2-220a6b78-400w.webp" alt="logo pizzeria">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h3 class="h3">Temas Relacionados</h3>
+                    <ul>
+                        <li><a href="./pages/contactenos.html">Trabaja con nosotros</a></li>
+                        <li><a href="https://www.whatsapp.com/" target="_blank">Reservas</a></li>
+                        <li><a href="https://www.whatsapp.com/" target="_blank">Delivery</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h3 class="h3">Datos de Contacto</h3>
+                    <ul>
+                        <li>Lavoluttuosa@gmail.com</li>
+                        <li>Telefono: 351-7271976</li>
+                        <li>Direccion: Via Tripoli 71</li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h3 class="h3">Redes Sociales</h3>
+                    <ul class="redes">
+                        <li>
+                            <a href="http://twitter.com" target="_blank">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/LaVoluttuosa/" target="_blank">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/la_voluttuosa/" target="_blank">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://linkedin.com" target="_blank">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="barra-footer">
+            &copy; 2022 - La Voluttuosa
+        </div>
+    </footer>
+
+    <a class="gotopbtn" href="#">
+        <i class="fa-sharp fa-solid fa-chevron-up"></i>
+        <!--boton scroll hacia arriba-->
+    </a>
+
+
+    <script src="./js/nav.js"></script>
+    <script src="https://kit.fontawesome.com/162005d3b0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous">
+        </script>
+    <script src="./js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script>window.rwbp = { email: 'tomas_olivari96@hotmail.com', phone: '+5491153295504', message: '!Hola! ¿Necesitas ayuda?', lang: 'es' }</script>
+    <script defer async src='https://duz4dqsaqembt.cloudfront.net/client/whats.js'></script>
+    <script src="https://kit.fontawesome.com/162005d3b0.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

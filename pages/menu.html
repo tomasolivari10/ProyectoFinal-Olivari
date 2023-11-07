@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="menu restaurante la voluttuosa pizzeria torino">
+    <meta name="keywords"
+        content="pizzeria, pizza, torino, italia, santa rita, delivery, gluten free, la voluttuosa, menu">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya:ital@1&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.3/build/global/luxon.min.js">
+    </script>
+    <link rel="stylesheet" href="../main.css">
+
+    <title>La Voluttuosa | Menu Restaurante</title>
+
+</head>
+
+<body>
+
+    <header>
+        <a href="../index.html">
+            <img src="../assets/images/la+voluttuosa+logo2-220a6b78-400w.webp" class="logo">
+        </a>
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <hr>
+            <a href="./menu.html">Menu</a>
+            <hr>
+            <a href="./pedido.html">Hace tu pedido</a>
+            <hr>
+            <a href="./galeria.html">Galeria</a>
+            <hr>
+            <a href="./acercadenosotros.html">¿Quienes Somos?</a>
+            <hr>
+            <a href="./ubicacion.html">Ubicacion</a>
+            <hr>
+            <a href="./contactenos.html">Contacto</a>
+        </nav>
+        
+            <a href="#" class="hamb"><i class="fas fa-bars"></i></a>
+    </header>
+
+    <main id="menus">
+        <div class="container-xl">
+            <h2 class="titulo-menu">Menu Restaurante</h2>
+            <div class="grid-container">
+                <div class="menu">
+                    <h3>Entradas</h3>
+                    <ul>
+                        <li>
+                            <p>Chiacchere</p>
+                            <p>$760</p>
+                        </li>
+                        <li>
+                            <p>Panini</p>
+                            <p>$800</p>
+                        </li>
+                        <li>
+                            <p>Crochette</p>
+                            <p>$650</p>
+                        </li>
+                        <li>
+                            <p>Papas Fritas</p>
+                            <p>$2500</p>
+                        </li>
+                        <li>
+                            <p>Farinata</p>
+                            <p>$1400</p>
+                        </li>
+                        <li>
+                            <p>Focaccia</p>
+                            <p>$1000</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu">
+                    <h3>Ensaladas</h3>
+                    <div>
+                        <ul>
+                            <li>
+                                <p>Nicoise</p>
+                                <p>$1200</p>
+                            </li>
+                            <li>
+                                <p>Rusa</p>
+                                <p>$1250</p>
+                            </li>
+                            <li>
+                                <p>Cesar</p>
+                                <p>$1300</p>
+                            </li>
+                            <li>
+                                <p>Griega</p>
+                                <p>$1500</p>
+                            </li>
+                            <li>
+                                <p>Caprese</p>
+                                <p>$1300</p>
+                            </li>
+                            <li>
+                                <p>Coleslaw</p>
+                                <p>$1600</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu">
+                    <h3>Pizzas Clasicas</h3>
+                    <div>
+                        <ul>
+                            <li>
+                                <p>Margherita</p>
+                                <p>$4000</p>
+                            </li>
+                            <li>
+                                <p>Diavola</p>
+                                <p>$4500</p>
+                            </li>
+                            <li>
+                                <p>Marinara</p>
+                                <p>$3800</p>
+                            </li>
+                            <li>
+                                <p>Quatro Formaggi</p>
+                                <p>$4500</p>
+                            </li>
+                            <li>
+                                <p>Carbonara</p>
+                                <p>$4200</p>
+                            </li>
+                            <li>
+                                <p>Capricciosa</p>
+                                <p>$5000</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu">
+                    <h3>Pizzas Especiales</h3>
+                    <div>
+                        <ul>
+                            <li>
+                                <p>Voluttuosa</p>
+                                <p>$5500</p>
+                            </li>
+                            <li>
+                                <p>Frutti di Mare</p>
+                                <p>$6000</p>
+                            </li>
+                            <li>
+                                <p>Quattro Stagioni</p>
+                                <p>$4900</p>
+                            </li>
+                            <li>
+                                <p>Prosciuto e patate</p>
+                                <p>$5000</p>
+                            </li>
+                            <li>
+                                <p>Salsicia e peperoni</p>
+                                <p>$5200</p>
+                            </li>
+                            <li>
+                                <p>Prosciuto e funghi</p>
+                                <p>$5500</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu">
+                    <h3>Bebidas</h3>
+                    <div>
+                        <ul>
+                            <li>
+                                <p>Acqua</p>
+                                <p>$500</p>
+                            </li>
+                            <li>
+                                <p>Coca Cola</p>
+                                <p>$800</p>
+                            </li>
+                            <li>
+                                <p>Birre</p>
+                                <p>$1200</p>
+                            </li>
+                            <li>
+                                <p>Tragos</p>
+                                <p>$1900</p>
+                            </li>
+                            <li>
+                                <p>Vino</p>
+                                <p>$3000</p>
+                            </li>
+                            <li>
+                                <p>Espumantes</p>
+                                <p>$2800</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu">
+                    <h3>Postres</h3>
+                    <div>
+                        <ul>
+                            <li>
+                                <p>Tiramisu</p>
+                                <p>$1200</p>
+                            </li>
+                            <li>
+                                <p>Mini cheese cake</p>
+                                <p>$1000</p>
+                            </li>
+                            <li>
+                                <p>Tarta de manzana</p>
+                                <p>$1300</p>
+                            </li>
+                            <li>
+                                <p>Helado</p>
+                                <p>$950</p>
+                            </li>
+                            <li>
+                                <p>Strudel</p>
+                                <p>$800</p>
+                            </li>
+                            <li>
+                                <p>Brownie</p>
+                                <p>$850</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="logo-footer">
+                        <a href="../index.html">
+                            <img src="../assets/images/la+voluttuosa+logo2-220a6b78-400w.webp" alt="logo pizzeria">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h3 class="h3">Temas Relacionados</h3>
+                    <ul>
+                        <li><a href="./contactenos.html">Trabaja con nosotros</a></li>
+                        <li><a href="https://www.whatsapp.com/" target="_blank">Reservas</a></li>
+                        <li><a href="https://www.whatsapp.com/" target="_blank">Delivery</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h3 class="h3">Datos de Contacto</h3>
+                    <ul>
+                        <li>Lavoluttuosa@gmail.com</li>
+                        <li>Telefono: 351-7271976</li>
+                        <li>Direccion: Via Tripoli 71</li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h3 class="h3">Redes Sociales</h3>
+                    <ul class="redes">
+                        <li>
+                            <a href="http://twitter.com" target="_blank">
+                                <i class="fa-brands fa-twitter"></i>
+                              </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/LaVoluttuosa/" target="_blank">
+                                <i class="fa-brands fa-facebook-f"></i>
+                              </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/la_voluttuosa/" target="_blank">
+                                <i class="fa-brands fa-instagram"></i>
+                              </a>
+                        </li>
+                        <li>
+                            <a href="http://linkedin.com" target="_blank">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                              </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="barra-footer">
+            &copy; 2022 - La Voluttuosa
+        </div>
+    </footer>
+
+    <a class="gotopbtn" href="#">
+        <i class="fa-sharp fa-solid fa-chevron-up"></i>
+        <!--boton scroll hacia arriba-->
+    </a>
+
+    <script src="../js/nav.js"></script>
+    <script src="https://kit.fontawesome.com/162005d3b0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous">
+        </script>
+    <script src="../js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script>window.rwbp = { email: 'tomas_olivari96@hotmail.com', phone: '+5491153295504', message: '!Hola! ¿Necesitas ayuda?', lang: 'es' }</script>
+    <script defer async src='https://duz4dqsaqembt.cloudfront.net/client/whats.js'></script>
+    <script src="https://kit.fontawesome.com/162005d3b0.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
