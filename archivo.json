@@ -1,0 +1,51 @@
+[
+    {
+        "nombre": "Diavola",
+        "precio": 4500 
+    },
+    {
+        "nombre": "Capricciosa",
+        "precio": 5000
+    },
+    {
+        "nombre": "Margherita",
+        "precio": 4000
+    },
+    {
+        "nombre": "Voluttuosa",
+        "precio": 5500
+    },
+    {
+        "nombre": "Boscaiola",
+        "precio": 4700
+    },
+    {
+        "nombre": "Frutti di mare",
+        "precio": 6000
+    },
+    {
+        "nombre": "Buffalina",
+        "precio": 5800
+    },
+    {
+        "nombre": "Carciofina",
+        "precio": 6200
+    }
+    ,
+    {
+        "nombre": "Ortolana",
+        "precio": 5900
+    },
+    {
+        "nombre": "Prosciuto e funghi",
+        "precio": 5500
+    },
+    {
+        "nombre": "Carne y morron",
+        "precio": 5200
+    },
+    {
+        "nombre": "Quattro formaggi",
+        "precio": 4500
+    }
+]

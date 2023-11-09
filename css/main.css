@@ -4,9 +4,9 @@
   padding: 0;
 }
 
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 body {
   font-family: "Alegreya", serif;
@@ -18,7 +18,7 @@ body {
 
 hr {
   width: 100%;
-  color: rgb(154, 144, 108) ;
+  color: rgb(154, 144, 108);
 }
 
 p {
@@ -75,7 +75,7 @@ nav {
   justify-content: space-evenly;
   align-items: center;
   right: 0;
-  transition: all 0.6s ease;
+  transition: all 0.5s ease;
   transform: translateX(100%);
   background-color: black;
   z-index: 3;
@@ -94,11 +94,11 @@ nav a:hover {
   border-radius: 3px;
 }
 
-.hamb  {
-    font-size: 35px;
-    margin-right: 10px;
-    color: rgb(154, 144, 108);
-    z-index: 3 ;
+.hamb {
+  font-size: 35px;
+  margin-right: 10px;
+  color: rgb(154, 144, 108);
+  z-index: 3;
 }
 
 .hamb:hover {
@@ -171,12 +171,16 @@ footer .redes i:hover {
   background-color: rgb(68, 68, 68);
 }
 
-.h2-destacados {
+.h2-destacados, .h2-pedidos, .h2-gluten-free {
   font-size: 50px;
   text-align: center;
   margin-top: 60px;
   margin-bottom: 35px;
   color: rgb(154, 144, 108);
+}
+
+.h2-gluten-free{
+  margin-top: 90px;
 }
 
 .h2-galeria {
@@ -185,14 +189,6 @@ footer .redes i:hover {
   border-bottom: 1px dashed rgb(154, 144, 108);
   padding-top: 155px;
   margin-bottom: 40px;
-  color: rgb(154, 144, 108);
-}
-
-.h2-gluten-free {
-  font-size: 50px;
-  text-align: center;
-  margin-top: 90px;
-  margin-bottom: 35px;
   color: rgb(154, 144, 108);
 }
 
@@ -206,13 +202,13 @@ footer .redes i:hover {
   color: rgb(154, 144, 108);
 }
 
-#carrito{
+#carrito {
   display: flex;
   justify-content: space-between;
 
 }
 
-#carrito select{
+#carrito select {
   margin-right: 15px;
   background-color: black;
   color: white;
@@ -227,28 +223,30 @@ footer .redes i:hover {
 }
 
 #carritoCompras h2 {
-    font: 45px "Alegreya", serif;
-    color:rgb(154, 144, 108);
-    text-align: center;
-    margin-bottom: 40px;
-    border-bottom: double;
+  font: 45px "Alegreya", serif;
+  color: rgb(154, 144, 108);
+  text-align: center;
+  margin-bottom: 40px;
+  border-bottom: double;
 }
 
-#cantidadCarrito p{
+#cantidadCarrito p {
   margin-bottom: 0;
+  margin-left: 20px;
   text-align: center;
   padding: 2px 0;
 }
 
-.detalles-carrito{
+.detalles-carrito {
   display: flex;
   justify-content: space-between;
   color: white;
+  font-size: 14px;
 }
 
-.detalles-carrito h3{
+.detalles-carrito h3 {
   font-size: 20px;
-  color:rgb(154, 144, 108)  ;
+  color: rgb(154, 144, 108);
 }
 
 .detalles-carrito ul {
@@ -264,22 +262,27 @@ footer .redes i:hover {
 
 .h2-pago {
   font-size: 30px;
-  color:rgb(154, 144, 108) ;
+  color: rgb(154, 144, 108);
   margin-bottom: 30px;
 }
 
-#metodoPago{
+#metodoPago {
   display: flex;
   margin-bottom: 10px;
 }
 
-#metodoPago label{
+#metodoPago label {
   font-size: 16px;
   color: white;
-  padding: 10px;
+  padding: 10px 0;
+  padding-right: 20px;
 }
 
-#metodoPago button {
+#botonesCarrito{
+  margin-bottom: 50px;
+}
+
+#botonesCarrito button{
   background-color: black;
   color: white;
   border: 1px solid rgb(154, 144, 108);
@@ -287,34 +290,43 @@ footer .redes i:hover {
   font-weight: bold;
   padding: 10px 15px;
   font-size: 14px;
-  transition:all ease-in-out 0.1s ;
-  margin-left: 20px;
+  transition: all ease-in-out 0.2s;
+  margin-top: 10px;
+  margin-right: 20px;
 }
 
-#metodoPago button:hover {
+#botonesCarrito button:hover {
   background-color: white;
   color: black;
 }
 
-.deleteBtn {
+#inputCarrito {
+  width: 40px;
+}
+
+.aumentarItem, .disminuirItem, .deleteBtn{
+  padding: 0 4px;
+  margin-left: 5px;
+  margin-top: 1px;
   background-color: black;
   color: white;
-  border: 1px solid rgb(154, 144, 108);
-  border-radius: 3px;
+  border: 1px solid white;
+  border-radius: 30%;
   font-weight: bold;
-  padding: 4px 5px;
-  font-size: 10px;
-  transition:all ease-in-out 0.1s ;
-  margin-left: 20px;
 }
 
-.deleteBtn:hover{
-  background-color: white;
-  color: black;
+.deleteBtn{
+  background-color: red;
 }
 
-#no-pago {
-  margin-bottom: 70px;
+.aumentarItem{ 
+ padding: 0px 5px;
+ background-color: green;
+}
+
+.disminuirItem {
+  padding: 0 6px;
+  background-color: gray;
 }
 
 #pizzas {
@@ -370,6 +382,7 @@ footer .redes i:hover {
 
 #menus {
   padding: 50px 20px;
+  padding-bottom: 0;
 }
 
 .titulo-menu {
@@ -515,7 +528,7 @@ footer .redes i:hover {
   margin-top: 95px;
 }
 
-.carousel-nosotros{
+.carousel-nosotros {
   margin-top: 40px;
 }
 
@@ -613,7 +626,8 @@ ul li {
 }
 
 
-.boton-destacados {
+.boton-destacados,
+.botonMenu {
   background-color: black;
   color: white;
   padding: 13px 11px;
@@ -627,6 +641,21 @@ ul li {
 .boton-destacados:hover {
   background-color: white;
   color: black;
+}
+
+.botonMenu {
+  margin-right: 35px;
+}
+
+.botonMenu:hover {
+  background-color: white;
+  color: black;
+}
+
+#botonMenu {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 50px;
 }
 
 .boton-contactenos {
@@ -646,12 +675,13 @@ ul li {
   border: 2px solid black;
 }
 
-.gotopbtn {
+#scrollToTopLink {
   position: fixed;
   width: 35px;
   height: 35px;
   background-color: black;
   border: solid 2px rgb(154, 144, 108);
+  border-radius: 4px;
   bottom: 30px;
   left: 30px;
   text-decoration: none;
@@ -659,10 +689,16 @@ ul li {
   line-height: 35px;
   color: white;
   font-size: 18px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
 }
 
-.gotopbtn:hover {
-  color: white;
+#scrollToTopLink.show {
+  opacity: 1;
+}
+
+#scrollToTopLink.hide {
+  opacity: 0;
 }
 
 @keyframes chevrondown {
@@ -729,10 +765,10 @@ ul li {
 }
 
 @media screen and (max-width: 991px) {
-  nav { 
+  nav {
     width: 50%;
   }
-   
+
   footer {
     text-align: center;
   }
@@ -862,10 +898,6 @@ ul li {
   .fas.fa-chevron-down.fa-3x {
     display: none;
   }
-
-  .gotopbtn {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 576px) {
@@ -881,6 +913,10 @@ ul li {
   #pizzas .h2-destacados {
     margin-top: 10px;
     margin-bottom: 20px;
+  }
+
+  .h2-pedidos {
+    margin-top: 100px;
   }
 
   #pizzas .container .destacados {
