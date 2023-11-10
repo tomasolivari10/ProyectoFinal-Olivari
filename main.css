@@ -4,9 +4,9 @@
   padding: 0;
 }
 
-/* html {
+ html {
   scroll-behavior: smooth;
-} */
+} 
 
 body {
   font-family: "Alegreya", serif;
@@ -913,10 +913,16 @@ ul li {
   #pizzas .h2-destacados {
     margin-top: 10px;
     margin-bottom: 20px;
+    font-size: 40px;
+  }
+
+  .h2-gluten-free{
+    font-size: 40px;
   }
 
   .h2-pedidos {
     margin-top: 100px;
+    font-size: 40px;
   }
 
   #pizzas .container .destacados {
@@ -953,6 +959,10 @@ ul li {
 
   .ubicacion .container {
     width: 95%;
+  }
+
+  #scrollToTopLink {
+    left: 20px;
   }
 }
 
