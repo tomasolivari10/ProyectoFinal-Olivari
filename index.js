@@ -1,9 +1,9 @@
 let pizzas;
 const container = document.querySelector('.container');
+let productosJson = "archivo.json";
 
-document.addEventListener("DOMContentLoaded", function () {
 
-    fetch('../archivo.json')
+    fetch(productosJson)
         .then(response => response.json())
         .then(data => {
             pizzas = data;
@@ -40,5 +40,4 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
 
-});
 
