@@ -1,51 +1,83 @@
 [
     {
         "nombre": "Diavola",
-        "precio": 4500 
+        "tipo": "FAVORITAS",
+        "imagen": "./assets/images/diavola.jpg",
+        "ingrediente1": "Mozzarella",  
+        "ingrediente2": "Salame picante",
+        "ingrediente3":"Tomate",
+        "precio": "$4.500"
     },
     {
         "nombre": "Capricciosa",
-        "precio": 5000
+        "tipo": "FAVORITAS",
+        "imagen": "./assets/images/capricciosa.jpg", 
+        "ingrediente1": "Jamon Cocido",  
+        "ingrediente2": "Champiñones",
+        "ingrediente3":"Alcachofa",
+        "precio": "$5.000"
     },
     {
         "nombre": "Margherita",
-        "precio": 4000
+        "tipo": "CLASICAS",
+        "imagen": "./assets/images/marghe.jpg",
+        "ingrediente1": "Mozzarella",  
+        "ingrediente2": "Tomate",
+        "ingrediente3":"Oregano",
+        "precio": "$4.000"
     },
     {
         "nombre": "Voluttuosa",
-        "precio": 5500
+        "tipo": "ESPECIALIDAD",
+        "imagen": "./assets/images/voluttuosa.jpg",
+        "ingrediente1": "Mozzarella",  
+        "ingrediente2": "Gorgonzola",
+        "ingrediente3":"Guanciale",
+        "precio": "$5.500"
     },
     {
         "nombre": "Boscaiola",
-        "precio": 4700
+        "tipo": "CLASICAS",
+        "imagen": "./assets/images/italy pizza.jpg",
+        "ingrediente1": "Champiñones",  
+        "ingrediente2": "Guanciale",
+        "ingrediente3":"Salamino",
+        "precio": "$4.700"
     },
     {
         "nombre": "Frutti di mare",
-        "precio": 6000
+        "tipo": "ESPECIALIDAD",
+        "imagen": "./assets/images/Frutti di mare.jpg",
+        "ingrediente1": "Camarones",  
+        "ingrediente2": "Mejillones",
+        "ingrediente3":"Calamares",
+        "precio": "$6.000"
     },
     {
         "nombre": "Buffalina",
-        "precio": 5800
+        "tipo": "SIN GLUTEN",
+        "imagen": "./assets/images/capricciosa.jpg",
+        "ingrediente1": "Mozzarella de bufalla",  
+        "ingrediente2": "Crema de alcachofas",
+        "ingrediente3":"Ricotta",
+        "precio": "$5.800"
     },
     {
         "nombre": "Carciofina",
-        "precio": 6200
-    }
-    ,
+        "tipo": "SIN GLUTEN",
+        "imagen": "./assets/images/pizza sin gluten 2.webp",
+        "ingrediente1": "Tomate",  
+        "ingrediente2": "Berenjena asada",
+        "ingrediente3":"Parmesano",
+        "precio": "$6.200"
+    },
     {
         "nombre": "Ortolana",
-        "precio": 5900
-    },
-    {
-        "nombre": "Prosciuto e funghi",
-        "precio": 5500
-    },
-    {
-        "nombre": "Carne y morron",
-        "precio": 5200
-    },
-    {
-        "nombre": "Quattro formaggi",
-        "precio": 4500
+        "tipo": "SIN GLUTEN",
+        "imagen": "./assets/images/ortolana.jpg",
+        "ingrediente1": "Pimiento",  
+        "ingrediente2": "Berenjena",
+        "ingrediente3":"Calabacines",
+        "precio": "$5.900"
     }
 ]

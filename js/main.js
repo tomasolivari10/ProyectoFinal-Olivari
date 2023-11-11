@@ -1,18 +1,30 @@
 const btnAñadir = document.querySelectorAll('.boton-destacados');
 
-let carrito = [] //inicializo un array vacio para luego ir añadiendo los productos 
-let historialPedidos = []
-let totalCarrito = 0
+let carrito = JSON.parse(localStorage.getItem("pedido")) || [];
+let totalCarrito = carrito.reduce((total, producto) => total + (producto.precio * producto.quantity), 0);
 
 
-btnAñadir.forEach((boton, indice) => {
+btnAñadir.forEach((boton) => {
     boton.addEventListener('click', function (event) {
         // Usa el objeto event para identificar el botón específico
         const botonClickeado = event.target;
         const card = botonClickeado.closest('.contenido-destacados'); // closest()se utiliza para encontrar el ancestro más cercano que cumple con un selector o una condición específica
         const nombreProducto = card.querySelector('h3').textContent; // Obtiene el nombre de la card
         const precioProducto = parseFloat(card.querySelector('span').textContent.replace('$', '')) // Obtiene el precio de la card
-
+        Toastify({
+            text: "Producto agregado al carrito",
+            duration: 3000,
+            close: true,
+            style: {
+                background: "darkgreen",
+                borderRadius: "5px",
+                fontSize: "15px"
+            },
+            offset: { x: 100, y: 50 },
+            onClick: function(){
+                window.location.href = "#carritoCompras";
+            }
+        }).showToast();
 
         // creo un objeto representando el producto
         const producto = {
@@ -22,33 +34,16 @@ btnAñadir.forEach((boton, indice) => {
             fecha: new Date(),
         };
 
-        /* const exists = carrito.some(product => product.nombre === producto.nombre);
+        const exists = carrito.some(product => product.nombre === producto.nombre);
 
         carrito = exists
             ? carrito.map(product => (product.nombre === producto.nombre ? { ...product, quantity: product.quantity + 1 } : product))
             : [...carrito, producto];
-             */
-
-        const exits = carrito.some((product => product.nombre === producto.nombre))
-        //some() para ver si en el carrito ya existe el nombre del producto que estoy añadiendo al carrito, podria ser find() tmb.
-
-        if (exits) {
-            const products = carrito.map(product => { //si existe le aumento de 1 a 1 la cantidad para que no se vuelva a añadir como un nuevo producto
-                if (product.nombre === producto.nombre) {
-                    product.quantity++
-                    return product
-                } else {
-                    return product
-                }
-            })
-            carrito = [...products];
-        } else {
-            carrito = [...carrito, producto]
-        }//la variable carrito se actualiza para que ahora haga referencia a la nueva copia que contiene todos los productos originales más el producto recién agregado. 
-        //esto para agregar un nuevo producto al carrito sin modificar el array original.
+        //si el producto ya existe en el carrito aumenta la cantidad del producto en 1
+        //si no existe, agrega el nuevo producto al carrito.
 
         actualizarCarrito()
-        // agrego el producto al carrito 
+        //agrego el producto al carrito 
 
         totalCarrito += precioProducto;//+= para sumar el precio del nuevo producto al que ya estaba, en vez de reasignarlo.
 
@@ -57,6 +52,8 @@ btnAñadir.forEach((boton, indice) => {
     });
 })
 
+document.addEventListener("DOMContentLoaded", actualizarCarrito())
+actualizarTotalCarrito()
 
 function actualizarCarrito() {
 
@@ -69,9 +66,9 @@ function actualizarCarrito() {
     cantidadCarrito.innerHTML = '';
 
     carrito.forEach((pizza, index) => {
-        const botonEliminar = document.createElement('button');
-        botonEliminar.innerHTML = `X`;
-        botonEliminar.classList.add("deleteBtn")
+        const botonEliminar = document.createElement('a');
+        botonEliminar.innerHTML = `<i class="fa fa-trash"></i>`;
+        botonEliminar.classList.add('deleteBtn')
         botonEliminar.addEventListener('click', function () {
             eliminarDelCarrito(index);
         });
@@ -104,10 +101,12 @@ function actualizarCarrito() {
         precioCarrito.appendChild(liPrecio)
         cantidadCarrito.appendChild(pCantidad)
         pCantidad.append(btnAumentar, btnDisminuir, botonEliminar);
+        localStorage.setItem("pedido", JSON.stringify(carrito))
     })
 }
 
-function actualizarTotalCarrito(total) {
+
+function actualizarTotalCarrito() {
     const totalCarritoElement = document.getElementById("total");
     totalCarritoElement.textContent = `${totalCarrito.toFixed(2)}`;
 }
@@ -120,14 +119,18 @@ let eliminarDelCarrito = (index) => {
     actualizarCarrito();
     actualizarTotalCarrito(totalCarrito);
     Toastify({
-        text: "Producto eliminado correctamente!",
-        duration: 3000,  // Duración en milisegundos
-        gravity: "bottom", // Posición de la notificación (puedes usar "top" o "bottom")
-        position: "center", // Alineación horizontal de la notificación
+        text: "Producto eliminado",
+        duration: 1500,
+        gravity: "bottom", // posición de la notificación 
+        position: "center",
         offset: { x: 0, y: 20 },
-        backgroundColor: "darkred",
+        style: {
+            background: "darkred",
+            borderRadius: "5px",
+            fontSize: "15px"},
         close: true
     }).showToast();
+    localStorage.setItem("pedido", JSON.stringify(carrito))
 }
 
 let aumentarItem = (index) => {
@@ -166,36 +169,52 @@ comprarButton.addEventListener('click', function () {
         function borrarP() {
             parrafo.style.display = "none";
         }
-        setTimeout(borrarP, 3000)
+        setTimeout(borrarP, 1500)
     } else {
         Swal.fire({
-            title: "El pedido se realizo con exito!",
+            title: "Compra exitosa!",
             text: `Compra con ${metodoPago.value} - Total: $${totalCarrito.toFixed(2)}`,
             icon: "success",
             showCloseButton: true,
             timer: 4000
         });
-        almacenarCompra()
-        vaciarCarrito()
+        compraExistosa()
     }
+    localStorage.setItem("pedido", JSON.stringify(carrito))
 });
+
+let compraExistosa = () => {
+    carrito = []; 
+    totalCarrito = 0; 
+    actualizarCarrito();
+    actualizarTotalCarrito(totalCarrito);
+}
 
 
 const btnVaciar = document.getElementById('vaciar')
 btnVaciar.addEventListener('click', vaciarCarrito)
 
 function vaciarCarrito() {
-    carrito = []; // vacio el carrito
-    totalCarrito = 0; // vuelve a 0 el total del carrito
-    actualizarCarrito();
-    actualizarTotalCarrito(totalCarrito);
+    if (carrito.length > 0) {
+        Swal.fire({
+            title: '¿Estás seguro?',
+            icon: 'question',
+            html: "Se eliminaran todos productos del carrito",
+            showCancelButton: true,
+            focusConfirm: false,
+            confirmButtonText: 'Sí',
+            cancelButtonText: 'No'
+        })
+            .then((result) => {
+                if (result.value) {
+                    carrito = []; // vacío el carrito
+                    totalCarrito = 0; // vuelvo a 0 el total del carrito
+                    actualizarCarrito();
+                    actualizarTotalCarrito(totalCarrito);
+                    localStorage.setItem("pedido", JSON.stringify(carrito))
+                }
+            })
+    }
 }
 
 
-let almacenarCompra = () => { localStorage.setItem("pedido", JSON.stringify(carrito)) }
-
-
-fetch('../archivo.json')
-    .then(response => response.json()) //.json() parsea los datos json a objetos.
-    .then((archivo) =>
-        console.table(archivo))

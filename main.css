@@ -4,9 +4,9 @@
   padding: 0;
 }
 
- html {
+html {
   scroll-behavior: smooth;
-} 
+}
 
 body {
   font-family: "Alegreya", serif;
@@ -125,7 +125,7 @@ footer .barra-footer {
   text-align: center;
   margin-bottom: 0;
   width: 100%;
-  font-size: 13px;
+  font-size: 14px;
   font-family: sans-serif;
 }
 
@@ -171,7 +171,9 @@ footer .redes i:hover {
   background-color: rgb(68, 68, 68);
 }
 
-.h2-destacados, .h2-pedidos, .h2-gluten-free {
+.h2-destacados,
+.h2-pedidos,
+.h2-gluten-free {
   font-size: 50px;
   text-align: center;
   margin-top: 60px;
@@ -179,7 +181,7 @@ footer .redes i:hover {
   color: rgb(154, 144, 108);
 }
 
-.h2-gluten-free{
+.h2-gluten-free {
   margin-top: 90px;
 }
 
@@ -245,7 +247,7 @@ footer .redes i:hover {
 }
 
 .detalles-carrito h3 {
-  font-size: 20px;
+  font-size: 25px;
   color: rgb(154, 144, 108);
 }
 
@@ -278,11 +280,11 @@ footer .redes i:hover {
   padding-right: 20px;
 }
 
-#botonesCarrito{
+#botonesCarrito {
   margin-bottom: 50px;
 }
 
-#botonesCarrito button{
+#botonesCarrito button {
   background-color: black;
   color: white;
   border: 1px solid rgb(154, 144, 108);
@@ -304,28 +306,39 @@ footer .redes i:hover {
   width: 40px;
 }
 
-.aumentarItem, .disminuirItem, .deleteBtn{
+.aumentarItem,
+.disminuirItem,
+.deleteBtn {
   padding: 0 4px;
-  margin-left: 5px;
   margin-top: 1px;
   background-color: black;
   color: white;
   border: 1px solid white;
   border-radius: 30%;
   font-weight: bold;
+  transition: 0.2s ease;
 }
 
-.deleteBtn{
-  background-color: red;
+.deleteBtn {
+  padding: 3px 5px;
+  margin-left: 14px;
 }
 
-.aumentarItem{ 
- padding: 0px 5px;
- background-color: green;
+.deleteBtn:hover {
+  color: white;
+  cursor: pointer;
+  background-color: rgb(136, 2, 2);
+}
+
+.aumentarItem {
+  padding: 0px 5px;
+  margin: 1px 4px 0px 4px;
+  background-color: green;
 }
 
 .disminuirItem {
-  padding: 0 6px;
+  padding: 0 7px;
+  margin: 1px 0px 0px 5px;
   background-color: gray;
 }
 
@@ -916,7 +929,7 @@ ul li {
     font-size: 40px;
   }
 
-  .h2-gluten-free{
+  .h2-gluten-free {
     font-size: 40px;
   }
 
