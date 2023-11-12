@@ -6,11 +6,11 @@ let totalCarrito = carrito.reduce((total, producto) => total + (producto.precio 
 
 btnAñadir.forEach((boton) => {
     boton.addEventListener('click', function (event) {
-        // Usa el objeto event para identificar el botón específico
+        // uso el objeto event para identificar el botón específico
         const botonClickeado = event.target;
-        const card = botonClickeado.closest('.contenido-destacados'); // closest()se utiliza para encontrar el ancestro más cercano que cumple con un selector o una condición específica
-        const nombreProducto = card.querySelector('h3').textContent; // Obtiene el nombre de la card
-        const precioProducto = parseFloat(card.querySelector('span').textContent.replace('$', '')) // Obtiene el precio de la card
+        const card = botonClickeado.closest('.contenido-destacados'); 
+        const nombreProducto = card.querySelector('h3').textContent; 
+        const precioProducto = parseFloat(card.querySelector('span').textContent.replace('$', '')) 
         Toastify({
             text: "Producto agregado al carrito",
             duration: 3000,
@@ -21,7 +21,7 @@ btnAñadir.forEach((boton) => {
                 fontSize: "15px"
             },
             offset: { x: 100, y: 50 },
-            onClick: function(){
+            onClick: function () {
                 window.location.href = "#carritoCompras";
             }
         }).showToast();
@@ -30,7 +30,7 @@ btnAñadir.forEach((boton) => {
         const producto = {
             quantity: 1,
             nombre: nombreProducto,
-            precio: precioProducto,
+            precio: precioProducto, 
             fecha: new Date(),
         };
 
@@ -39,13 +39,11 @@ btnAñadir.forEach((boton) => {
         carrito = exists
             ? carrito.map(product => (product.nombre === producto.nombre ? { ...product, quantity: product.quantity + 1 } : product))
             : [...carrito, producto];
-        //si el producto ya existe en el carrito aumenta la cantidad del producto en 1
-        //si no existe, agrega el nuevo producto al carrito.
 
         actualizarCarrito()
         //agrego el producto al carrito 
 
-        totalCarrito += precioProducto;//+= para sumar el precio del nuevo producto al que ya estaba, en vez de reasignarlo.
+        totalCarrito += precioProducto;
 
         // actualiza el total del carrito por cada producto agregado
         actualizarTotalCarrito(totalCarrito);
@@ -115,19 +113,20 @@ function actualizarTotalCarrito() {
 let eliminarDelCarrito = (index) => {
     const productoAEliminar = carrito[index];
     totalCarrito -= productoAEliminar.precio * productoAEliminar.quantity;
-    carrito.splice(index, 1); // elimino 1 solo elemento partiendo desde el indice proporcionado (index )
+    carrito.splice(index, 1); 
     actualizarCarrito();
     actualizarTotalCarrito(totalCarrito);
     Toastify({
         text: "Producto eliminado",
         duration: 1500,
-        gravity: "bottom", // posición de la notificación 
+        gravity: "bottom", 
         position: "center",
         offset: { x: 0, y: 20 },
         style: {
             background: "darkred",
             borderRadius: "5px",
-            fontSize: "15px"},
+            fontSize: "15px"
+        },
         close: true
     }).showToast();
     localStorage.setItem("pedido", JSON.stringify(carrito))
@@ -184,8 +183,8 @@ comprarButton.addEventListener('click', function () {
 });
 
 let compraExistosa = () => {
-    carrito = []; 
-    totalCarrito = 0; 
+    carrito = [];
+    totalCarrito = 0;
     actualizarCarrito();
     actualizarTotalCarrito(totalCarrito);
 }
@@ -207,8 +206,8 @@ function vaciarCarrito() {
         })
             .then((result) => {
                 if (result.value) {
-                    carrito = []; // vacío el carrito
-                    totalCarrito = 0; // vuelvo a 0 el total del carrito
+                    carrito = []; 
+                    totalCarrito = 0; 
                     actualizarCarrito();
                     actualizarTotalCarrito(totalCarrito);
                     localStorage.setItem("pedido", JSON.stringify(carrito))
